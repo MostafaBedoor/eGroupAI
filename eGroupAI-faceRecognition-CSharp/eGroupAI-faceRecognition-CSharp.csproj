@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94AE004B-FBC2-4F72-8D05-ECB4941D23D0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>eGroupAI_faceRecognition_CSharp</RootNamespace>
+    <AssemblyName>eGroupAI-faceRecognition-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="engine\control\CheckStatusUtil.cs" />
+    <Compile Include="engine\control\CreateEngineFileUtil.cs" />
+    <Compile Include="engine\control\EngineFunc.cs" />
+    <Compile Include="engine\control\EngineUtil.cs" />
+    <Compile Include="engine\entity\Face.cs" />
+    <Compile Include="engine\entity\FrameFace.cs" />
+    <Compile Include="engine\entity\ModelAppend.cs" />
+    <Compile Include="engine\entity\ModelAppendInfo.cs" />
+    <Compile Include="engine\entity\ModelAppendResult.cs" />
+    <Compile Include="engine\entity\ModelCompare.cs" />
+    <Compile Include="engine\entity\ModelCompareInfo.cs" />
+    <Compile Include="engine\entity\ModelCompareResultData.cs" />
+    <Compile Include="engine\entity\ModelInsert.cs" />
+    <Compile Include="engine\entity\ModelInsertInfo.cs" />
+    <Compile Include="engine\entity\ModelInsertResult.cs" />
+    <Compile Include="engine\entity\ModelSwitch.cs" />
+    <Compile Include="engine\entity\ModelSwitchResult.cs" />
+    <Compile Include="engine\entity\RecognizeFace.cs" />
+    <Compile Include="engine\entity\RecognizeResultData.cs" />
+    <Compile Include="engine\entity\RFIDFace.cs" />
+    <Compile Include="engine\entity\SimilarFace.cs" />
+    <Compile Include="engine\entity\StartupInfo.cs" />
+    <Compile Include="engine\entity\StartupStatus.cs" />
+    <Compile Include="engine\entity\TrainFace.cs" />
+    <Compile Include="engine\entity\TrainInfo.cs" />
+    <Compile Include="engine\entity\TrainResult.cs" />
+    <Compile Include="engine\entity\TrainResultData.cs" />
+    <Compile Include="engine\util\CmdUtil.cs" />
+    <Compile Include="engine\util\CopyUtil.cs" />
+    <Compile Include="engine\util\FolderUtil.cs" />
+    <Compile Include="engine\control\GetResultUtil.cs" />
+    <Compile Include="engine\util\TxtUtil.cs" />
+    <Compile Include="library\AttributeCheck.cs" />
+    <Compile Include="library\UUIDGenerator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
